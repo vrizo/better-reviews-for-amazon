@@ -53,3 +53,7 @@ After:
 ## Docs
 
 Project notes and research live in [`docs/`](./docs/).
+
+Useful docs:
+
+- [Screenshot workflow](./docs/screenshot-workflow.md)

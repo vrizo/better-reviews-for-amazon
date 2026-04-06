@@ -1,7 +1,10 @@
+import type { LocaleMessages, SupportedLocale } from '../i18n/generated';
 import { UI_ID } from './constants';
 import type { ReviewStats } from './types';
 
-export function buildContainer() {
+type UiMessages = LocaleMessages['ui'];
+
+export function buildContainer(messages: UiMessages) {
   const container = document.createElement('div');
   container.id = UI_ID;
   container.className = 'a-row a-spacing-small';
@@ -9,50 +12,56 @@ export function buildContainer() {
 
   const loading = document.createElement('span');
   loading.className = 'a-size-small a-color-secondary';
-  loading.textContent = 'Loading review stats...';
+  loading.textContent = messages.loading;
 
   container.appendChild(loading);
   return container;
 }
 
-export function renderStats(container: HTMLElement, stats: ReviewStats) {
+export function renderStats(
+  container: HTMLElement,
+  stats: ReviewStats,
+  { locale, messages }: { locale: SupportedLocale; messages: UiMessages }
+) {
   container.replaceChildren();
 
   const verifiedRow = makeRow();
-  verifiedRow.appendChild(makeLinkedLabel('Verified purchase reviews', stats.urls.verified));
+  verifiedRow.appendChild(makeLinkedLabel(messages.verifiedPurchaseReviews, stats.urls.verified));
   verifiedRow.appendChild(document.createTextNode(': '));
-  verifiedRow.appendChild(makeBoldText(formatVerifiedSummary(stats.verifiedRating, stats.verifiedCount)));
+  verifiedRow.appendChild(makeBoldText(formatVerifiedSummary(stats.verifiedRating, stats.verifiedCount, locale)));
 
   const sentimentRow = makeRow();
-  sentimentRow.appendChild(makeInlineLinkedStat('Critical reviews', stats.criticalVerifiedCount, stats.urls.critical));
+  sentimentRow.appendChild(
+    makeInlineLinkedStat(messages.criticalReviews, stats.criticalVerifiedCount, stats.urls.critical, locale)
+  );
   sentimentRow.appendChild(makeSeparator());
-  sentimentRow.appendChild(makeInlineLinkedStat('Positive reviews', stats.positiveVerifiedCount, stats.urls.positive));
+  sentimentRow.appendChild(
+    makeInlineLinkedStat(messages.positiveReviews, stats.positiveVerifiedCount, stats.urls.positive, locale)
+  );
 
   const vineRow = makeRow();
-  vineRow.appendChild(makeTextStat('Vine reviews', stats.vineCount));
+  vineRow.appendChild(makeTextStat(messages.vineReviews, stats.vineCount, locale));
 
   if (stats.stale) {
     vineRow.appendChild(makeSeparator());
     const stale = document.createElement('span');
     stale.className = 'a-color-secondary';
-    stale.title = 'Showing cached data because the live review pages were unavailable.';
-    stale.textContent = 'cached';
+    stale.title = messages.cachedTitle;
+    stale.textContent = messages.cachedLabel;
     vineRow.appendChild(stale);
   }
 
   container.append(verifiedRow, sentimentRow, vineRow);
 }
 
-export function renderError(container: HTMLElement, error: unknown) {
+export function renderError(container: HTMLElement, error: unknown, messages: UiMessages) {
   container.replaceChildren();
 
+  const isSignInRequired = error instanceof Error && /signed-in session/i.test(error.message);
   const message = document.createElement('span');
   message.className = 'a-size-small a-color-secondary';
-  message.title = error instanceof Error ? error.message : 'Unknown error';
-  message.textContent =
-    error instanceof Error && /signed-in session/i.test(error.message)
-      ? 'Review stats unavailable: sign in required'
-      : 'Review stats unavailable';
+  message.title = isSignInRequired ? messages.errorSignInRequired : messages.errorUnavailable;
+  message.textContent = isSignInRequired ? messages.errorSignInRequired : messages.errorUnavailable;
 
   container.appendChild(message);
 }
@@ -65,17 +74,17 @@ function makeLinkedLabel(label: string, href: string) {
   return link;
 }
 
-function makeInlineLinkedStat(label: string, value: number, href: string) {
+function makeInlineLinkedStat(label: string, value: number, href: string, locale: SupportedLocale) {
   const wrapper = document.createElement('span');
-  wrapper.append(makeLinkedLabel(label, href), document.createTextNode(': '), makeBoldText(formatCount(value)));
+  wrapper.append(makeLinkedLabel(label, href), document.createTextNode(': '), makeBoldText(formatCount(value, locale)));
   return wrapper;
 }
 
-function makeTextStat(label: string, value: number) {
+function makeTextStat(label: string, value: number, locale: SupportedLocale) {
   const wrapper = document.createElement('span');
   const labelNode = document.createElement('span');
   labelNode.textContent = `${label}: `;
-  wrapper.append(labelNode, makeBoldText(formatCount(value)));
+  wrapper.append(labelNode, makeBoldText(formatCount(value, locale)));
   return wrapper;
 }
 
@@ -101,21 +110,19 @@ function makeSeparator() {
   return separator;
 }
 
-function formatCount(value: number) {
-  const locale = document.documentElement.lang || undefined;
+function formatCount(value: number, locale: SupportedLocale) {
   return new Intl.NumberFormat(locale).format(value);
 }
 
-function formatRating(value: number) {
-  const locale = document.documentElement.lang || undefined;
+function formatRating(value: number, locale: SupportedLocale) {
   return new Intl.NumberFormat(locale, {
     minimumFractionDigits: 1,
     maximumFractionDigits: 1
   }).format(value);
 }
 
-function formatVerifiedSummary(rating: number | null, count: number) {
+function formatVerifiedSummary(rating: number | null, count: number, locale: SupportedLocale) {
   return typeof rating !== 'number' || Number.isNaN(rating)
-    ? `(${formatCount(count)})`
-    : `${formatRating(rating)} (${formatCount(count)})`;
+    ? `(${formatCount(count, locale)})`
+    : `${formatRating(rating, locale)} (${formatCount(count, locale)})`;
 }

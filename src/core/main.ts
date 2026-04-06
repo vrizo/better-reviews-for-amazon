@@ -2,6 +2,7 @@ import { fetchReviewAggregate, getAsin, waitForAnchor } from './amazon';
 import { CACHE_PREFIX, CACHE_TTL_MS, REVIEWER_TYPES, STAR_FILTERS, UI_ID } from './constants';
 import type { ReviewStats, StorageLike } from './types';
 import { buildContainer, renderError, renderStats } from './ui';
+import { getLocaleMessages, resolveAmazonPageLocale } from '../i18n/runtime';
 
 export function runBetterReviews({
   storage = window.localStorage,
@@ -21,19 +22,22 @@ async function init(storage: StorageLike) {
     return;
   }
 
+  const locale = resolveAmazonPageLocale();
+  const messages = getLocaleMessages(locale).ui;
+
   const anchor = await waitForAnchor();
   if (!anchor || document.getElementById(UI_ID)) {
     return;
   }
 
-  const container = buildContainer();
+  const container = buildContainer(messages);
   anchor.insertAdjacentElement('afterend', container);
 
   try {
     const stats = await getReviewStats(asin, storage);
-    renderStats(container, stats);
+    renderStats(container, stats, { locale, messages });
   } catch (error) {
-    renderError(container, error);
+    renderError(container, error, messages);
   }
 }
 

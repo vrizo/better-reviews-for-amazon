@@ -27,6 +27,9 @@ It shows:
 - critical verified reviews
 - Vine reviews
 
+The injected block follows the Amazon page language.
+Extension metadata follows the browser language when a translation is available.
+
 ## Install
 
 1. Install Tampermonkey or Violentmonkey.
@@ -38,6 +41,8 @@ It shows:
 - Shared Amazon logic lives in [`src/core/`](./src/core/).
 - Thin entry points live in [`src/userscript/`](./src/userscript/), [`src/chrome-extension/`](./src/chrome-extension/), and [`src/firefox-extension/`](./src/firefox-extension/).
 - Chrome and Firefox manifests are generated from one shared base.
+- All shared translations live in [`src/i18n/locales/`](./src/i18n/locales/).
+- Add a new locale by creating one more JSON file with the same keys, then run `npm run build`.
 - Extension icons are generated during build and added to both browser packages.
 - Run `npm install`.
 - Run `npm run build`.

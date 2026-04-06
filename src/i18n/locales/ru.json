@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "name": "Better Reviews for Amazon",
+    "description": "Делает отзывы о товарах на страницах Amazon более заслуживающими доверия."
+  },
+  "ui": {
+    "loading": "Загрузка данных отзывов…",
+    "verifiedPurchaseReviews": "Отзывы с подтверждённой покупкой",
+    "criticalReviews": "Критические отзывы",
+    "positiveReviews": "Положительные отзывы",
+    "vineReviews": "Отзывы Vine",
+    "cachedLabel": "кэш",
+    "cachedTitle": "Показаны данные из кэша, потому что страницы отзывов сейчас недоступны.",
+    "errorUnavailable": "Данные отзывов недоступны",
+    "errorSignInRequired": "Данные отзывов недоступны — нужен вход в аккаунт"
+  }
+}

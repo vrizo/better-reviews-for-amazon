@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "name": "Better Reviews for Amazon",
+    "description": "Makes product reviews look more trustworthy on Amazon pages."
+  },
+  "ui": {
+    "loading": "Loading review stats…",
+    "verifiedPurchaseReviews": "Verified purchase reviews",
+    "criticalReviews": "Critical reviews",
+    "positiveReviews": "Positive reviews",
+    "vineReviews": "Vine reviews",
+    "cachedLabel": "cached",
+    "cachedTitle": "Showing cached data because the live review pages were unavailable.",
+    "errorUnavailable": "Review stats unavailable",
+    "errorSignInRequired": "Review stats unavailable — sign in required"
+  }
+}

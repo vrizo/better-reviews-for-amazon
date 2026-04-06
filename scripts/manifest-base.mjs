@@ -55,9 +55,10 @@ export const marketplaceGroups = Object.freeze({
 
 export const manifestBase = {
   manifest_version: 3,
-  name: marketplaceGroups.browserExtension.name,
+  name: '__MSG_extensionName__',
   version: packageVersion,
-  description: marketplaceGroups.browserExtension.description,
+  description: '__MSG_extensionDescription__',
+  default_locale: 'en',
   icons: marketplaceGroups.browserExtension.icons,
   ...(marketplaceGroups.browserExtension.permissions.length > 0
     ? { permissions: marketplaceGroups.browserExtension.permissions }

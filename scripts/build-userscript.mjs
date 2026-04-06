@@ -1,12 +1,24 @@
 import { build } from 'esbuild';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
-import { marketplaceGroups, packageVersion } from './manifest-base.mjs';
+import { packageVersion } from './manifest-base.mjs';
+import { defaultLocale, loadLocaleCatalog } from './shared-locales.mjs';
+
+const localeCatalog = await loadLocaleCatalog();
+const defaultMessages = localeCatalog[defaultLocale];
+const localizedHeader = Object.entries(localeCatalog)
+  .filter(([locale]) => locale !== defaultLocale)
+  .flatMap(([locale, messages]) => [
+    `// @name:${locale}    ${messages.meta.name}`,
+    `// @description:${locale} ${messages.meta.description}`
+  ])
+  .join('\n');
 
 const header = `// ==UserScript==
-// @name         ${marketplaceGroups.userscript.name}
+// @name         ${defaultMessages.meta.name}
 // @namespace    https://openai.com/codex
 // @version      ${packageVersion}
-// @description  ${marketplaceGroups.userscript.description}
+// @description  ${defaultMessages.meta.description}
+${localizedHeader}
 // @include      /^https:\\/\\/(www\\.)?amazon\\.[^/]+\\/.*$/
 // @grant        none
 // @run-at       document-idle

@@ -100,17 +100,28 @@ function parseCount(text: string | undefined) {
     return null;
   }
 
-  const match = text.match(/[\d][\d.,\s\u00A0\u202F]*/);
-  if (!match) {
+  const matches = text.match(/\d[\d.,\s\u00A0\u202F]*/gu);
+  if (!matches) {
     return null;
   }
 
-  const digitsOnly = match[0].replace(/\D/g, '');
-  if (!digitsOnly) {
-    return null;
+  let largestValue: number | null = null;
+
+  for (const match of matches) {
+    const digitsOnly = match.replace(/\D/gu, '');
+    if (!digitsOnly) {
+      continue;
+    }
+
+    const value = Number(digitsOnly);
+    if (!Number.isFinite(value)) {
+      continue;
+    }
+
+    largestValue = largestValue === null ? value : Math.max(largestValue, value);
   }
 
-  return Number(digitsOnly);
+  return largestValue;
 }
 
 function parseRating(text: string) {

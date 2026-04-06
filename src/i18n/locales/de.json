@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "name": "Better Reviews for Amazon",
+    "description": "Lässt Produktbewertungen auf Amazon-Seiten vertrauenswürdiger wirken."
+  },
+  "ui": {
+    "loading": "Bewertungsdaten werden geladen…",
+    "verifiedPurchaseReviews": "Bewertungen mit verifiziertem Kauf",
+    "criticalReviews": "Kritische Bewertungen",
+    "positiveReviews": "Positive Bewertungen",
+    "vineReviews": "Vine-Bewertungen",
+    "cachedLabel": "Cache",
+    "cachedTitle": "Zwischengespeicherte Daten werden angezeigt, weil die Live-Bewertungsseiten nicht verfügbar waren.",
+    "errorUnavailable": "Bewertungsdaten nicht verfügbar",
+    "errorSignInRequired": "Bewertungsdaten nicht verfügbar — Anmeldung erforderlich"
+  }
+}

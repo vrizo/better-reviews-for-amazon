@@ -38,8 +38,10 @@ It shows:
 - Shared Amazon logic lives in [`src/core/`](./src/core/).
 - Thin entry points live in [`src/userscript/`](./src/userscript/), [`src/chrome-extension/`](./src/chrome-extension/), and [`src/firefox-extension/`](./src/firefox-extension/).
 - Chrome and Firefox manifests are generated from one shared base.
+- Extension icons are generated during build and added to both browser packages.
 - Run `npm install`.
 - Run `npm run build`.
+- Run `npm run build:release` to create Chrome and Firefox zip files in `dist/release/`.
 
 ## Notes
 

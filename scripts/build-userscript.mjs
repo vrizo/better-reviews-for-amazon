@@ -1,12 +1,12 @@
 import { build } from 'esbuild';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
-import { packageVersion } from './manifest-base.mjs';
+import { marketplaceGroups, packageVersion } from './manifest-base.mjs';
 
 const header = `// ==UserScript==
-// @name         Better Reviews for Amazon
+// @name         ${marketplaceGroups.userscript.name}
 // @namespace    https://openai.com/codex
 // @version      ${packageVersion}
-// @description  Shows better review signals on Amazon product pages.
+// @description  ${marketplaceGroups.userscript.description}
 // @include      /^https:\\/\\/(www\\.)?amazon\\.[^/]+\\/.*$/
 // @grant        none
 // @run-at       document-idle

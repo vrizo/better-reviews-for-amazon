@@ -6,10 +6,12 @@
   "type": "module",
   "scripts": {
     "build": "npm run clean && npm run build:all",
-    "build:all": "npm run build:userscript && npm run build:extensions && npm run build:manifests",
+    "build:all": "npm run build:userscript && npm run build:extensions && npm run build:icons && npm run build:manifests",
     "build:userscript": "node ./scripts/build-userscript.mjs",
     "build:extensions": "node ./scripts/build-extensions.mjs",
+    "build:icons": "node ./scripts/build-icons.mjs",
     "build:manifests": "node ./scripts/build-manifests.mjs",
+    "build:release": "npm run clean && npm run build:all && node ./scripts/build-release.mjs",
     "clean": "node ./scripts/clean.mjs",
     "typecheck": "tsc --noEmit"
   },

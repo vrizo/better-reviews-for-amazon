@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Amazon Review Breakdown
+// @name         Better Reviews for Amazon
 // @namespace    https://openai.com/codex
-// @version      0.2.0
-// @description  Shows verified-purchase and Vine review counts on Amazon product pages.
+// @version      0.3.0
+// @description  Shows better review signals on Amazon product pages.
 // @include      /^https:\/\/(www\.)?amazon\.[^/]+\/.*$/
 // @grant        none
 // @run-at       document-idle
@@ -11,9 +11,9 @@
 (() => {
   'use strict';
 
-  const CACHE_PREFIX = 'amazon-review-breakdown:v2';
+  const CACHE_PREFIX = 'better-reviews-for-amazon:v1';
   const CACHE_TTL_MS = 24 * 60 * 60 * 1000;
-  const UI_ID = 'acr-review-breakdown-extra';
+  const UI_ID = 'better-reviews-for-amazon-extra';
   const REVIEWER_TYPES = Object.freeze({
     ALL: 'all_reviews',
     VERIFIED: 'avp_only_reviews',
@@ -24,7 +24,7 @@
   });
 
   init().catch((error) => {
-    console.error('[amazon-review-breakdown]', error);
+    console.error('[better-reviews-for-amazon]', error);
   });
 
   async function init() {

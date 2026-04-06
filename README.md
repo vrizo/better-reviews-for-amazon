@@ -1,22 +1,45 @@
-# Better Amazon Reviews
+# Better Reviews for Amazon
 
-Small userscript for Amazon product pages.
+Open source tools for better review signals on Amazon pages.
 
-It adds a compact review summary under the product rating:
+Right now this repo contains one userscript.
+Later it will also contain:
+
+- a Chrome extension
+- a Firefox extension
+
+All versions follow the same rules:
+
+- only work on Amazon pages
+- do not collect user data
+- do not send data to a backend
+- do not add referral links
+- do not change checkout or account pages
+
+## Current tool
+
+The current userscript adds a small review block under the product rating.
+
+It shows:
 
 - verified purchase rating and count
 - positive verified reviews
 - critical verified reviews
-- Vine review count, calculated as `all reviews - verified purchase reviews`
+- Vine reviews, calculated as `all reviews - verified purchase reviews`
 
 ## Install
 
 1. Install Tampermonkey or Violentmonkey.
-2. Open [`amazon-review-breakdown.user.js`](./amazon-review-breakdown.user.js).
+2. Open [`better-reviews-for-amazon.user.js`](./better-reviews-for-amazon.user.js).
 3. Install the script in your userscript manager.
 
 ## Notes
 
 - Best used while signed in to Amazon.
 - Review numbers are cached for 24 hours.
-- The script reads review totals from Amazon review filter pages and shows them on the product page.
+- The script reads Amazon review filter pages and shows the totals on the product page.
+- This project is not affiliated with or endorsed by Amazon.
+
+## Docs
+
+Project notes and research live in [`docs/`](./docs/).

@@ -25,7 +25,7 @@ It shows:
 - verified purchase rating and count
 - positive verified reviews
 - critical verified reviews
-- Vine reviews, calculated as `all reviews - verified purchase reviews`
+- Vine reviews
 
 ## Install
 
@@ -35,10 +35,20 @@ It shows:
 
 ## Notes
 
-- Best used while signed in to Amazon.
+- Requires a signed-in Amazon session.
 - Review numbers are cached for 24 hours.
 - The script reads Amazon review filter pages and shows the totals on the product page.
 - This project is not affiliated with or endorsed by Amazon.
+
+## Screenshots
+
+Before:
+
+![Before screenshot](./docs/images/review-block-before.png)
+
+After:
+
+![After screenshot](./docs/images/review-block-after.png)
 
 ## Docs
 

@@ -1,0 +1,20 @@
+{
+  "name": "better-reviews-for-amazon",
+  "version": "0.4.0",
+  "private": true,
+  "description": "Shared TypeScript source for Better Reviews for Amazon userscript and browser extensions.",
+  "type": "module",
+  "scripts": {
+    "build": "npm run clean && npm run build:all",
+    "build:all": "npm run build:userscript && npm run build:extensions && npm run build:manifests",
+    "build:userscript": "node ./scripts/build-userscript.mjs",
+    "build:extensions": "node ./scripts/build-extensions.mjs",
+    "build:manifests": "node ./scripts/build-manifests.mjs",
+    "clean": "node ./scripts/clean.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.3",
+    "typescript": "^5.8.3"
+  }
+}

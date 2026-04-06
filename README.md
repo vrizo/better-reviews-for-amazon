@@ -2,7 +2,7 @@
 
 Open source tools for better review signals on Amazon pages.
 
-Right now this repo contains one userscript.
+Right now this repo contains one userscript and the shared source for browser extensions.
 Later it will also contain:
 
 - a Chrome extension
@@ -33,6 +33,14 @@ It shows:
 2. Open [`better-reviews-for-amazon.user.js`](./better-reviews-for-amazon.user.js).
 3. Install the script in your userscript manager.
 
+## Development
+
+- Shared Amazon logic lives in [`src/core/`](./src/core/).
+- Thin entry points live in [`src/userscript/`](./src/userscript/), [`src/chrome-extension/`](./src/chrome-extension/), and [`src/firefox-extension/`](./src/firefox-extension/).
+- Chrome and Firefox manifests are generated from one shared base.
+- Run `npm install`.
+- Run `npm run build`.
+
 ## Notes
 
 - Requires a signed-in Amazon session.
@@ -53,7 +61,3 @@ After:
 ## Docs
 
 Project notes and research live in [`docs/`](./docs/).
-
-Useful docs:
-
-- [Screenshot workflow](./docs/screenshot-workflow.md)

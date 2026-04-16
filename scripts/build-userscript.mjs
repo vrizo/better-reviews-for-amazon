@@ -1,6 +1,6 @@
 import { build } from 'esbuild';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
-import { packageVersion } from './manifest-base.mjs';
+import { packageAuthor, packageHomepage, packageVersion } from './manifest-base.mjs';
 import { defaultLocale, loadLocaleCatalog } from './shared-locales.mjs';
 
 const localeCatalog = await loadLocaleCatalog();
@@ -15,7 +15,8 @@ const localizedHeader = Object.entries(localeCatalog)
 
 const header = `// ==UserScript==
 // @name         ${defaultMessages.meta.name}
-// @namespace    https://openai.com/codex
+// @namespace    ${packageHomepage}
+// @author       ${packageAuthor}
 // @version      ${packageVersion}
 // @description  ${defaultMessages.meta.description}
 ${localizedHeader}
@@ -33,6 +34,7 @@ await build({
   bundle: true,
   format: 'iife',
   target: 'es2022',
+  charset: 'utf8',
   legalComments: 'none'
 });
 

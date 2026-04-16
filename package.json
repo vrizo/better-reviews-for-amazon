@@ -3,6 +3,15 @@
   "version": "0.4.0",
   "private": true,
   "description": "Shared TypeScript source for Better Reviews for Amazon userscript and browser extensions.",
+  "author": "Vitalii Rizo (https://github.com/vrizo)",
+  "homepage": "https://github.com/vrizo/better-reviews-for-amazon",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vrizo/better-reviews-for-amazon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vrizo/better-reviews-for-amazon/issues"
+  },
   "type": "module",
   "scripts": {
     "build": "npm run clean && npm run build:all",
@@ -17,6 +26,7 @@
     "typecheck": "npm run build:locales && tsc --noEmit"
   },
   "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
     "esbuild": "^0.25.3",
     "typescript": "^5.8.3"
   }

@@ -4,6 +4,8 @@ const packageJson = JSON.parse(await readFile(new URL('../package.json', import.
 
 export const packageVersion = packageJson.version;
 export const packageName = packageJson.name;
+export const packageAuthor = packageJson.author;
+export const packageHomepage = packageJson.homepage;
 
 export const manifestMatchPatterns = [
   'https://www.amazon.com/*',

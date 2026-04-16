@@ -9,6 +9,13 @@ Create two screenshots:
 - before
 - after
 
+Use this shared capture setup:
+
+- viewport: `1280x800`
+- language: English
+- one screenshot set for all supported listing languages
+- anonymize product and account details before capture
+
 Both screenshots should highlight the review area with:
 
 - 25px padding
@@ -26,12 +33,17 @@ Save screenshots here:
 
 1. Open the Amazon product page in Chrome MCP.
 2. Reload the page first, so the userscript is not running.
-3. Resize the page to a stable size.
+3. Resize the page to `1280x800`.
 4. Scroll to the product rating block.
-5. Add the screenshot overlay around `#averageCustomerReviews_feature_div`.
-6. Use 25px padding.
-7. Extend the focus area a bit below the rating block, so the future extension area is visible.
-8. Save the screenshot as `review-block-before.png`.
+5. Anonymize the page:
+   replace the product title with a fake title
+   replace seller or brand text with fake text
+   hide the cart count and delivery address
+   strongly blur the product image
+6. Add the screenshot overlay around `#averageCustomerReviews_feature_div`.
+7. Use 25px padding.
+8. Extend the focus area a bit below the rating block, so the future extension area is visible.
+9. Save the screenshot as `review-block-before.png`.
 
 ## After screenshot
 

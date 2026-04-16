@@ -43,10 +43,19 @@ Extension metadata follows the browser language when a translation is available.
 - Chrome and Firefox manifests are generated from one shared base.
 - All shared translations live in [`src/i18n/locales/`](./src/i18n/locales/).
 - Add a new locale by creating one more JSON file with the same keys, then run `npm run build`.
-- Extension icons are generated during build and added to both browser packages.
+- Extension icons are rendered from [`src/icon.svg`](./src/icon.svg) during build and added to both browser packages.
 - Run `npm install`.
 - Run `npm run build`.
 - Run `npm run build:release` to create Chrome and Firefox zip files in `dist/release/`.
+
+## Contribute
+
+Contributions are welcome on GitHub.
+
+- Open an issue: [github.com/vrizo/better-reviews-for-amazon/issues](https://github.com/vrizo/better-reviews-for-amazon/issues)
+- Open a pull request: [github.com/vrizo/better-reviews-for-amazon/pulls](https://github.com/vrizo/better-reviews-for-amazon/pulls)
+- A good first contribution is improving translations in [`src/i18n/locales/`](./src/i18n/locales/).
+- Store listing notes and copy live in [`docs/store-listing.md`](./docs/store-listing.md).
 
 ## Notes
 
@@ -54,6 +63,10 @@ Extension metadata follows the browser language when a translation is available.
 - Review numbers are cached for 24 hours.
 - The script reads Amazon review filter pages and shows the totals on the product page.
 - This project is not affiliated with or endorsed by Amazon.
+
+## Author
+
+Built by [Vitalii Rizo](https://github.com/vrizo).
 
 ## Screenshots
 

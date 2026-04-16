@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Store Screenshot Wireframe for Amazon - Plugin Active</title>
+    <link rel="stylesheet" href="./store-screenshot-wireframe.css" />
+    <script src="./store-screenshot-plugin.js" defer></script>
+    <script src="./store-screenshot-highlight.js" defer></script>
+    <script src="./store-screenshot-scene.js" defer></script>
+    <script src="./store-screenshot-preset.js" defer></script>
+    <script src="./store-screenshot-recording.js" defer></script>
+  </head>
+  <body id="wireframe-page">
+    <div id="recording-controls" aria-live="polite">
+      <button id="record-demo-button" type="button">Record Demo</button>
+      <span id="recording-status">Ready to record this tab.</span>
+    </div>
+    <div id="page-shell">
+      <header id="amazon-header">
+        <div id="header-top-row">
+          <div id="brand-block">
+            <div id="brand-logo">amazon<span id="brand-domain">.de</span></div>
+          </div>
+
+          <div id="delivery-block">
+            <span id="delivery-label">Deliver to</span>
+            <span id="delivery-value">John Doe</span>
+          </div>
+
+          <div id="search-block">
+            <div id="search-category">Kindle Store</div>
+            <div id="search-field">Search Amazon.de</div>
+            <div id="search-button">
+              <span id="search-icon" aria-hidden="true"></span>
+            </div>
+          </div>
+
+          <div id="language-block">
+            <span id="language-flag"></span>
+            <span id="language-value">EN</span>
+          </div>
+
+          <div id="account-block">
+            <span id="account-label">Hello, John Doe</span>
+            <span id="account-value">Account &amp; Lists</span>
+          </div>
+
+          <div id="orders-block">Returns &amp; Orders</div>
+
+          <div id="basket-block">
+            <span id="basket-count">404</span>
+            <span id="basket-label">Basket</span>
+          </div>
+        </div>
+      </header>
+
+      <main id="product-page">
+        <div id="product-layout">
+          <aside id="media-column">
+            <section id="media-gallery">
+              <div id="thumbnail-rail">
+                <div id="thumb-1" class="thumb-item"></div>
+                <div id="thumb-2" class="thumb-item"></div>
+                <div id="thumb-3" class="thumb-item"></div>
+                <div id="thumb-4" class="thumb-item"></div>
+                <div id="thumb-5" class="thumb-item"></div>
+                <div id="thumb-6" class="thumb-item"></div>
+                <div id="thumb-7" class="thumb-item"></div>
+                <div id="thumb-8" class="thumb-item"></div>
+              </div>
+
+              <div id="hero-column">
+                <div id="product-hero">
+                  <div id="hero-text-block">
+                    <span id="hero-title">kindle</span>
+                    <span id="hero-subtitle">Leicht und kompakt</span>
+                    <span id="hero-copy">Jetzt mit besserem Display-Features</span>
+                  </div>
+                  <div id="hero-device">
+                    <div id="device-screen"></div>
+                  </div>
+                  <div id="hero-hand-left"></div>
+                  <div id="hero-hand-right"></div>
+                  <div id="hero-share">⤴</div>
+                </div>
+
+                <div id="hero-features-row">
+                  <div id="feature-display" class="feature-card">
+                    <div id="feature-display-icon" class="feature-icon"></div>
+                    <span id="feature-display-text">Blendfree Display</span>
+                  </div>
+                  <div id="feature-light" class="feature-card">
+                    <div id="feature-light-icon" class="feature-icon"></div>
+                    <span id="feature-light-text">Front light</span>
+                  </div>
+                  <div id="feature-battery" class="feature-card">
+                    <div id="feature-battery-icon" class="feature-icon"></div>
+                    <span id="feature-battery-text">Weekly battery</span>
+                  </div>
+                  <div id="feature-storage" class="feature-card">
+                    <div id="feature-storage-icon" class="feature-icon"></div>
+                    <span id="feature-storage-text">Storage for books</span>
+                  </div>
+                </div>
+
+                <div id="hero-link-row">Click to see full view</div>
+              </div>
+            </section>
+
+            <section id="ask-rufus-card">
+              <div id="ask-rufus-header">
+                <span id="ask-rufus-dot"></span>
+                <span id="ask-rufus-title">Ask Rufus</span>
+              </div>
+              <div id="ask-rufus-chips">
+                <div id="ask-chip-backlight" class="ask-chip">Does it have a backlight?</div>
+                <div id="ask-chip-wifi" class="ask-chip">Can it connect to Wi-Fi?</div>
+                <div id="ask-chip-waterproof" class="ask-chip">Is it waterproof?</div>
+                <div id="ask-chip-more" class="ask-chip ask-chip-strong">Ask something else</div>
+              </div>
+            </section>
+          </aside>
+
+          <section id="details-column">
+            <section id="title-card">
+              <h1 id="product-title">
+                Amazon Kindle (16 GB) - light and compact Kindle with glare-free display
+              </h1>
+
+              <div id="store-link-row">Visit the Amazon Kindle Store</div>
+
+              <div id="averageCustomerReviews_feature_div">
+                <div id="averageCustomerReviews">
+                  <div id="rating-row">
+                    <span id="rating-score">4.6</span>
+                    <div id="rating-stars">
+                      <span id="star-1" class="star-item"></span>
+                      <span id="star-2" class="star-item"></span>
+                      <span id="star-3" class="star-item"></span>
+                      <span id="star-4" class="star-item"></span>
+                      <span id="star-5" class="star-item star-item-fade"></span>
+                    </div>
+                    <span id="rating-count">(17,944)</span>
+                  </div>
+                </div>
+
+                <div id="better-reviews-for-amazon-extra" class="a-row" aria-hidden="true">
+                  <div id="plugin-verified-row" class="a-size-small a-color-secondary" style="line-height: 1.4;">
+                    <a id="plugin-verified-link" class="a-link-normal" href="#">Verified purchase reviews</a>: 
+                    <span id="plugin-verified-value" class="a-color-base a-text-bold">4.6 (14,228)</span>
+                  </div>
+
+                  <div id="plugin-sentiment-row" class="a-size-small a-color-secondary" style="line-height: 1.4;">
+                    <span id="plugin-critical-stat">
+                      <a id="plugin-critical-link" class="a-link-normal" href="#">Critical reviews</a>: 
+                      <span id="plugin-critical-value" class="a-color-base a-text-bold">642</span>
+                    </span>
+                    <span id="plugin-separator" class="a-color-secondary" style="margin: 0 6px;">|</span>
+                    <span id="plugin-positive-stat">
+                      <a id="plugin-positive-link" class="a-link-normal" href="#">Positive reviews</a>: 
+                      <span id="plugin-positive-value" class="a-color-base a-text-bold">12,184</span>
+                    </span>
+                  </div>
+
+                  <div id="plugin-vine-row" class="a-size-small a-color-secondary" style="line-height: 1.4;">
+                    <span id="plugin-vine-stat">
+                      <span id="plugin-vine-label">Vine reviews: </span>
+                      <span id="plugin-vine-value" class="a-color-base a-text-bold">3,716</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div id="choice-badge">Amazon’s Choice</div>
+
+              <div id="sustainability-row">
+                <span id="sustainability-icon"></span>
+                <span id="sustainability-text">1 sustainability feature</span>
+              </div>
+
+              <div id="purchase-note">1K+ bought in past month</div>
+            </section>
+
+            <section id="offer-card">
+              <div id="deal-tag-row">
+                <div id="deal-tag">Limited time deal</div>
+                <div id="deal-info">i</div>
+              </div>
+
+              <div id="price-row">
+                <span id="discount-value">-23%</span>
+                <span id="price-value">€84<span id="price-cents">99</span></span>
+              </div>
+
+              <div id="rrp-row">
+                <span id="rrp-label">RRP:</span>
+                <span id="rrp-value">€109.99</span>
+              </div>
+
+              <div id="plan-row">
+                <span id="plan-badge">Or €17<span id="plan-cents">00</span></span>
+                <span id="plan-copy">/month (5 months)</span>
+              </div>
+
+              <div id="interest-row">at no interest with Amazon Select plan</div>
+
+              <div id="returns-row">FREE Returns</div>
+
+              <div id="vat-row">Prices include VAT.</div>
+
+              <div id="tradein-row">Save 20% with Trade-In</div>
+            </section>
+          </section>
+
+          <aside id="buy-column">
+            <section id="buy-box">
+              <div id="buy-price-row">
+                <span id="buy-currency-price">€84<span id="buy-cents">99</span></span>
+              </div>
+
+              <div id="buy-returns-row">FREE Returns</div>
+
+              <div id="buy-delivery-row">
+                FREE delivery Thursday, 16 April for Prime members
+              </div>
+
+              <div id="buy-location-row">Deliver to John Doe - Berlin</div>
+
+              <div id="buy-quantity-row">
+                <span id="buy-quantity-label">Quantity: 1</span>
+                <span id="buy-quantity-arrow">⌄</span>
+              </div>
+
+              <div id="buy-add-button">Add to basket</div>
+              <div id="buy-now-button">Buy Now</div>
+
+              <div id="buy-meta-grid">
+                <div id="meta-ship-label" class="meta-label">Shipper / Seller</div>
+                <div id="meta-ship-value" class="meta-value">Amazon</div>
+
+                <div id="meta-returns-label" class="meta-label">Returns</div>
+                <div id="meta-returns-value" class="meta-value">Returnable within 30 days of receipt</div>
+
+                <div id="meta-support-label" class="meta-label">Support</div>
+                <div id="meta-support-value" class="meta-value">Product support included</div>
+
+                <div id="meta-payment-label" class="meta-label">Payment</div>
+                <div id="meta-payment-value" class="meta-value">Secure transaction</div>
+              </div>
+
+              <div id="buy-more-row">See more</div>
+            </section>
+          </aside>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

@@ -7,24 +7,30 @@ export const localeCatalog = {
   "de": {
     "meta": {
       "name": "Better Reviews for Amazon",
-      "description": "Lässt Produktbewertungen auf Amazon-Seiten vertrauenswürdiger wirken."
+      "description": "Blendet unzuverlässige Bewertungen aus und erleichtert die Einschätzung von Produkten auf Amazon."
+    },
+    "marketplace": {
+      "description": "Better Reviews for Amazon fügt auf Amazon-Produktseiten einen kleinen Block mit einer kurzen Zusammenfassung der Bewertungen hinzu. Er hilft, die Qualität der Bewertungen schnell einzuschätzen, indem nur Bewertungen mit verifiziertem Kauf angezeigt werden.\n\nDie Erweiterung schließt Vine-Bewertungen aus der Berechnung der Bewertung aus. Vine-Bewertungen stammen von Nutzern, die Produkte kostenlos im Austausch für Feedback erhalten, daher können sie weniger zuverlässig sein.\n\nDie Erweiterung funktioniert nur auf Amazon-Seiten. Sie läuft lokal in Ihrem Browser, sammelt keine Daten, sendet nichts an einen Server und fügt keine Affiliate-Links oder Tracking hinzu.\n\nDieses Open-Source-Projekt wurde von Vitalii Rizo erstellt. Beiträge auf GitHub sind willkommen, einschließlich Pull Requests mit Übersetzungen und anderen Verbesserungen. Das Projekt ist nicht mit Amazon verbunden und wurde nicht von Amazon genehmigt."
     },
     "ui": {
-      "loading": "Bewertungsdaten werden geladen…",
+      "loading": "Lade Bewertungsstatistiken…",
       "verifiedPurchaseReviews": "Bewertungen mit verifiziertem Kauf",
-      "criticalReviews": "Kritische Bewertungen",
+      "criticalReviews": "Negative Bewertungen",
       "positiveReviews": "Positive Bewertungen",
       "vineReviews": "Vine-Bewertungen",
-      "cachedLabel": "Cache",
-      "cachedTitle": "Zwischengespeicherte Daten werden angezeigt, weil die Live-Bewertungsseiten nicht verfügbar waren.",
-      "errorUnavailable": "Bewertungsdaten nicht verfügbar",
-      "errorSignInRequired": "Bewertungsdaten nicht verfügbar — Anmeldung erforderlich"
+      "cachedLabel": "zwischengespeichert",
+      "cachedTitle": "Zwischengespeicherte Daten werden angezeigt, da die Bewertungsseiten derzeit nicht verfügbar sind.",
+      "errorUnavailable": "Bewertungsstatistiken nicht verfügbar",
+      "errorSignInRequired": "Bewertungsstatistiken nicht verfügbar, Anmeldung erforderlich"
     }
   },
   "en": {
     "meta": {
       "name": "Better Reviews for Amazon",
-      "description": "Makes product reviews look more trustworthy on Amazon pages."
+      "description": "Makes Amazon product reviews easier to trust and compare."
+    },
+    "marketplace": {
+      "description": "Better Reviews for Amazon adds a small review summary box to Amazon product pages. It helps you quickly understand review quality by showing totals for verified purchase reviews only.\n\nIt excludes Vine reviews from rating calculations. Vine reviews are written by reviewers who receive products for free in exchange for feedback, which can make them less reliable.\n\nThe extension only works on Amazon pages. It runs locally in your browser, does not collect your data, does not send anything to a backend, and does not add referral links or tracking.\n\nThis open source project was created by Vitalii Rizo. Contributions are welcome on GitHub, including pull requests for translations and other small improvements. This project is not affiliated with Amazon and is not endorsed by Amazon."
     },
     "ui": {
       "loading": "Loading review stats…",
@@ -33,26 +39,29 @@ export const localeCatalog = {
       "positiveReviews": "Positive reviews",
       "vineReviews": "Vine reviews",
       "cachedLabel": "cached",
-      "cachedTitle": "Showing cached data because the live review pages were unavailable.",
-      "errorUnavailable": "Review stats unavailable",
-      "errorSignInRequired": "Review stats unavailable — sign in required"
+      "cachedTitle": "Showing cached data because the live review pages were not available.",
+      "errorUnavailable": "Review stats not available",
+      "errorSignInRequired": "Review stats not available, sign-in required"
     }
   },
   "ru": {
     "meta": {
       "name": "Better Reviews for Amazon",
-      "description": "Делает отзывы о товарах на страницах Amazon более заслуживающими доверия."
+      "description": "Скрывает недоверенные отзывы и упрощает оценку товаров в Amazon."
+    },
+    "marketplace": {
+      "description": "Better Reviews for Amazon добавляет небольшой блок с краткой сводкой отзывов на страницы товаров Amazon. Он помогает быстро оценить качество отзывов, показывая только отзывы с подтверждённой покупкой.\n\nРасширение исключает отзывы Vine из расчёта рейтинга. Отзывы Vine пишут пользователи, которые получают товары бесплатно в обмен на обратную связь, поэтому они могут быть менее надёжными.\n\nРасширение работает только на страницах Amazon. Оно выполняется локально в вашем браузере, не собирает данные, ничего не отправляет на сервер и не добавляет реферальные ссылки или трекинг.\n\nЭтот проект с открытым исходным кодом создан Vitalii Rizo. Приветствуются изменения на GitHub, включая pull request с переводами и другими улучшениями. Проект не связан с Amazon и не был одобрен Amazon."
     },
     "ui": {
-      "loading": "Загрузка данных отзывов…",
+      "loading": "Загрузка статистики отзывов…",
       "verifiedPurchaseReviews": "Отзывы с подтверждённой покупкой",
-      "criticalReviews": "Критические отзывы",
+      "criticalReviews": "Негативные отзывы",
       "positiveReviews": "Положительные отзывы",
       "vineReviews": "Отзывы Vine",
-      "cachedLabel": "кэш",
-      "cachedTitle": "Показаны данные из кэша, потому что страницы отзывов сейчас недоступны.",
-      "errorUnavailable": "Данные отзывов недоступны",
-      "errorSignInRequired": "Данные отзывов недоступны — нужен вход в аккаунт"
+      "cachedLabel": "кэшировано",
+      "cachedTitle": "Показаны кэшированные данные, так как страницы с отзывами сейчас недоступны.",
+      "errorUnavailable": "Статистика отзывов недоступна",
+      "errorSignInRequired": "Статистика отзывов недоступна, требуется вход в аккаунт"
     }
   }
 } as const;

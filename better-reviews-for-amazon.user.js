@@ -1,12 +1,13 @@
 // ==UserScript==
 // @name         Better Reviews for Amazon
-// @namespace    https://openai.com/codex
+// @namespace    https://github.com/vrizo/better-reviews-for-amazon
+// @author       Vitalii Rizo (https://github.com/vrizo)
 // @version      0.4.0
-// @description  Makes product reviews look more trustworthy on Amazon pages.
+// @description  Makes Amazon product reviews easier to trust and compare.
 // @name:de    Better Reviews for Amazon
-// @description:de Lässt Produktbewertungen auf Amazon-Seiten vertrauenswürdiger wirken.
+// @description:de Blendet unzuverlässige Bewertungen aus und erleichtert die Einschätzung von Produkten auf Amazon.
 // @name:ru    Better Reviews for Amazon
-// @description:ru Делает отзывы о товарах на страницах Amazon более заслуживающими доверия.
+// @description:ru Скрывает недоверенные отзывы и упрощает оценку товаров в Amazon.
 // @include      /^https:\/\/(www\.)?amazon\.[^/]+\/.*$/
 // @grant        none
 // @run-at       document-idle
@@ -244,52 +245,61 @@
     "de": {
       "meta": {
         "name": "Better Reviews for Amazon",
-        "description": "L\xE4sst Produktbewertungen auf Amazon-Seiten vertrauensw\xFCrdiger wirken."
+        "description": "Blendet unzuverlässige Bewertungen aus und erleichtert die Einschätzung von Produkten auf Amazon."
+      },
+      "marketplace": {
+        "description": "Better Reviews for Amazon fügt auf Amazon-Produktseiten einen kleinen Block mit einer kurzen Zusammenfassung der Bewertungen hinzu. Er hilft, die Qualität der Bewertungen schnell einzuschätzen, indem nur Bewertungen mit verifiziertem Kauf angezeigt werden.\n\nDie Erweiterung schließt Vine-Bewertungen aus der Berechnung der Bewertung aus. Vine-Bewertungen stammen von Nutzern, die Produkte kostenlos im Austausch für Feedback erhalten, daher können sie weniger zuverlässig sein.\n\nDie Erweiterung funktioniert nur auf Amazon-Seiten. Sie läuft lokal in Ihrem Browser, sammelt keine Daten, sendet nichts an einen Server und fügt keine Affiliate-Links oder Tracking hinzu.\n\nDieses Open-Source-Projekt wurde von Vitalii Rizo erstellt. Beiträge auf GitHub sind willkommen, einschließlich Pull Requests mit Übersetzungen und anderen Verbesserungen. Das Projekt ist nicht mit Amazon verbunden und wurde nicht von Amazon genehmigt."
       },
       "ui": {
-        "loading": "Bewertungsdaten werden geladen\u2026",
+        "loading": "Lade Bewertungsstatistiken…",
         "verifiedPurchaseReviews": "Bewertungen mit verifiziertem Kauf",
-        "criticalReviews": "Kritische Bewertungen",
+        "criticalReviews": "Negative Bewertungen",
         "positiveReviews": "Positive Bewertungen",
         "vineReviews": "Vine-Bewertungen",
-        "cachedLabel": "Cache",
-        "cachedTitle": "Zwischengespeicherte Daten werden angezeigt, weil die Live-Bewertungsseiten nicht verf\xFCgbar waren.",
-        "errorUnavailable": "Bewertungsdaten nicht verf\xFCgbar",
-        "errorSignInRequired": "Bewertungsdaten nicht verf\xFCgbar \u2014 Anmeldung erforderlich"
+        "cachedLabel": "zwischengespeichert",
+        "cachedTitle": "Zwischengespeicherte Daten werden angezeigt, da die Bewertungsseiten derzeit nicht verfügbar sind.",
+        "errorUnavailable": "Bewertungsstatistiken nicht verfügbar",
+        "errorSignInRequired": "Bewertungsstatistiken nicht verfügbar, Anmeldung erforderlich"
       }
     },
     "en": {
       "meta": {
         "name": "Better Reviews for Amazon",
-        "description": "Makes product reviews look more trustworthy on Amazon pages."
+        "description": "Makes Amazon product reviews easier to trust and compare."
+      },
+      "marketplace": {
+        "description": "Better Reviews for Amazon adds a small review summary box to Amazon product pages. It helps you quickly understand review quality by showing totals for verified purchase reviews only.\n\nIt excludes Vine reviews from rating calculations. Vine reviews are written by reviewers who receive products for free in exchange for feedback, which can make them less reliable.\n\nThe extension only works on Amazon pages. It runs locally in your browser, does not collect your data, does not send anything to a backend, and does not add referral links or tracking.\n\nThis open source project was created by Vitalii Rizo. Contributions are welcome on GitHub, including pull requests for translations and other small improvements. This project is not affiliated with Amazon and is not endorsed by Amazon."
       },
       "ui": {
-        "loading": "Loading review stats\u2026",
+        "loading": "Loading review stats…",
         "verifiedPurchaseReviews": "Verified purchase reviews",
         "criticalReviews": "Critical reviews",
         "positiveReviews": "Positive reviews",
         "vineReviews": "Vine reviews",
         "cachedLabel": "cached",
-        "cachedTitle": "Showing cached data because the live review pages were unavailable.",
-        "errorUnavailable": "Review stats unavailable",
-        "errorSignInRequired": "Review stats unavailable \u2014 sign in required"
+        "cachedTitle": "Showing cached data because the live review pages were not available.",
+        "errorUnavailable": "Review stats not available",
+        "errorSignInRequired": "Review stats not available, sign-in required"
       }
     },
     "ru": {
       "meta": {
         "name": "Better Reviews for Amazon",
-        "description": "\u0414\u0435\u043B\u0430\u0435\u0442 \u043E\u0442\u0437\u044B\u0432\u044B \u043E \u0442\u043E\u0432\u0430\u0440\u0430\u0445 \u043D\u0430 \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0430\u0445 Amazon \u0431\u043E\u043B\u0435\u0435 \u0437\u0430\u0441\u043B\u0443\u0436\u0438\u0432\u0430\u044E\u0449\u0438\u043C\u0438 \u0434\u043E\u0432\u0435\u0440\u0438\u044F."
+        "description": "Скрывает недоверенные отзывы и упрощает оценку товаров в Amazon."
+      },
+      "marketplace": {
+        "description": "Better Reviews for Amazon добавляет небольшой блок с краткой сводкой отзывов на страницы товаров Amazon. Он помогает быстро оценить качество отзывов, показывая только отзывы с подтверждённой покупкой.\n\nРасширение исключает отзывы Vine из расчёта рейтинга. Отзывы Vine пишут пользователи, которые получают товары бесплатно в обмен на обратную связь, поэтому они могут быть менее надёжными.\n\nРасширение работает только на страницах Amazon. Оно выполняется локально в вашем браузере, не собирает данные, ничего не отправляет на сервер и не добавляет реферальные ссылки или трекинг.\n\nЭтот проект с открытым исходным кодом создан Vitalii Rizo. Приветствуются изменения на GitHub, включая pull request с переводами и другими улучшениями. Проект не связан с Amazon и не был одобрен Amazon."
       },
       "ui": {
-        "loading": "\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0430 \u0434\u0430\u043D\u043D\u044B\u0445 \u043E\u0442\u0437\u044B\u0432\u043E\u0432\u2026",
-        "verifiedPurchaseReviews": "\u041E\u0442\u0437\u044B\u0432\u044B \u0441 \u043F\u043E\u0434\u0442\u0432\u0435\u0440\u0436\u0434\u0451\u043D\u043D\u043E\u0439 \u043F\u043E\u043A\u0443\u043F\u043A\u043E\u0439",
-        "criticalReviews": "\u041A\u0440\u0438\u0442\u0438\u0447\u0435\u0441\u043A\u0438\u0435 \u043E\u0442\u0437\u044B\u0432\u044B",
-        "positiveReviews": "\u041F\u043E\u043B\u043E\u0436\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0435 \u043E\u0442\u0437\u044B\u0432\u044B",
-        "vineReviews": "\u041E\u0442\u0437\u044B\u0432\u044B Vine",
-        "cachedLabel": "\u043A\u044D\u0448",
-        "cachedTitle": "\u041F\u043E\u043A\u0430\u0437\u0430\u043D\u044B \u0434\u0430\u043D\u043D\u044B\u0435 \u0438\u0437 \u043A\u044D\u0448\u0430, \u043F\u043E\u0442\u043E\u043C\u0443 \u0447\u0442\u043E \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u044B \u043E\u0442\u0437\u044B\u0432\u043E\u0432 \u0441\u0435\u0439\u0447\u0430\u0441 \u043D\u0435\u0434\u043E\u0441\u0442\u0443\u043F\u043D\u044B.",
-        "errorUnavailable": "\u0414\u0430\u043D\u043D\u044B\u0435 \u043E\u0442\u0437\u044B\u0432\u043E\u0432 \u043D\u0435\u0434\u043E\u0441\u0442\u0443\u043F\u043D\u044B",
-        "errorSignInRequired": "\u0414\u0430\u043D\u043D\u044B\u0435 \u043E\u0442\u0437\u044B\u0432\u043E\u0432 \u043D\u0435\u0434\u043E\u0441\u0442\u0443\u043F\u043D\u044B \u2014 \u043D\u0443\u0436\u0435\u043D \u0432\u0445\u043E\u0434 \u0432 \u0430\u043A\u043A\u0430\u0443\u043D\u0442"
+        "loading": "Загрузка статистики отзывов…",
+        "verifiedPurchaseReviews": "Отзывы с подтверждённой покупкой",
+        "criticalReviews": "Негативные отзывы",
+        "positiveReviews": "Положительные отзывы",
+        "vineReviews": "Отзывы Vine",
+        "cachedLabel": "кэшировано",
+        "cachedTitle": "Показаны кэшированные данные, так как страницы с отзывами сейчас недоступны.",
+        "errorUnavailable": "Статистика отзывов недоступна",
+        "errorSignInRequired": "Статистика отзывов недоступна, требуется вход в аккаунт"
       }
     }
   };

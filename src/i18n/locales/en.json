@@ -1,7 +1,10 @@
 {
   "meta": {
     "name": "Better Reviews for Amazon",
-    "description": "Makes product reviews look more trustworthy on Amazon pages."
+    "description": "Makes Amazon product reviews easier to trust and compare."
+  },
+  "marketplace": {
+    "description": "Better Reviews for Amazon adds a small review summary box to Amazon product pages. It helps you quickly understand review quality by showing totals for verified purchase reviews only.\n\nIt excludes Vine reviews from rating calculations. Vine reviews are written by reviewers who receive products for free in exchange for feedback, which can make them less reliable.\n\nThe extension only works on Amazon pages. It runs locally in your browser, does not collect your data, does not send anything to a backend, and does not add referral links or tracking.\n\nThis open source project was created by Vitalii Rizo. Contributions are welcome on GitHub, including pull requests for translations and other small improvements. This project is not affiliated with Amazon and is not endorsed by Amazon."
   },
   "ui": {
     "loading": "Loading review stats…",
@@ -10,8 +13,8 @@
     "positiveReviews": "Positive reviews",
     "vineReviews": "Vine reviews",
     "cachedLabel": "cached",
-    "cachedTitle": "Showing cached data because the live review pages were unavailable.",
-    "errorUnavailable": "Review stats unavailable",
-    "errorSignInRequired": "Review stats unavailable — sign in required"
+    "cachedTitle": "Showing cached data because the live review pages were not available.",
+    "errorUnavailable": "Review stats not available",
+    "errorSignInRequired": "Review stats not available, sign-in required"
   }
 }

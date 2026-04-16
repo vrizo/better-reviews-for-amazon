@@ -1,17 +1,20 @@
 {
   "meta": {
     "name": "Better Reviews for Amazon",
-    "description": "Lässt Produktbewertungen auf Amazon-Seiten vertrauenswürdiger wirken."
+    "description": "Blendet unzuverlässige Bewertungen aus und erleichtert die Einschätzung von Produkten auf Amazon."
+  },
+  "marketplace": {
+    "description": "Better Reviews for Amazon fügt auf Amazon-Produktseiten einen kleinen Block mit einer kurzen Zusammenfassung der Bewertungen hinzu. Er hilft, die Qualität der Bewertungen schnell einzuschätzen, indem nur Bewertungen mit verifiziertem Kauf angezeigt werden.\n\nDie Erweiterung schließt Vine-Bewertungen aus der Berechnung der Bewertung aus. Vine-Bewertungen stammen von Nutzern, die Produkte kostenlos im Austausch für Feedback erhalten, daher können sie weniger zuverlässig sein.\n\nDie Erweiterung funktioniert nur auf Amazon-Seiten. Sie läuft lokal in Ihrem Browser, sammelt keine Daten, sendet nichts an einen Server und fügt keine Affiliate-Links oder Tracking hinzu.\n\nDieses Open-Source-Projekt wurde von Vitalii Rizo erstellt. Beiträge auf GitHub sind willkommen, einschließlich Pull Requests mit Übersetzungen und anderen Verbesserungen. Das Projekt ist nicht mit Amazon verbunden und wurde nicht von Amazon genehmigt."
   },
   "ui": {
-    "loading": "Bewertungsdaten werden geladen…",
+    "loading": "Lade Bewertungsstatistiken…",
     "verifiedPurchaseReviews": "Bewertungen mit verifiziertem Kauf",
-    "criticalReviews": "Kritische Bewertungen",
+    "criticalReviews": "Negative Bewertungen",
     "positiveReviews": "Positive Bewertungen",
     "vineReviews": "Vine-Bewertungen",
-    "cachedLabel": "Cache",
-    "cachedTitle": "Zwischengespeicherte Daten werden angezeigt, weil die Live-Bewertungsseiten nicht verfügbar waren.",
-    "errorUnavailable": "Bewertungsdaten nicht verfügbar",
-    "errorSignInRequired": "Bewertungsdaten nicht verfügbar — Anmeldung erforderlich"
+    "cachedLabel": "zwischengespeichert",
+    "cachedTitle": "Zwischengespeicherte Daten werden angezeigt, da die Bewertungsseiten derzeit nicht verfügbar sind.",
+    "errorUnavailable": "Bewertungsstatistiken nicht verfügbar",
+    "errorSignInRequired": "Bewertungsstatistiken nicht verfügbar, Anmeldung erforderlich"
   }
 }

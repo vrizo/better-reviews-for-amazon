@@ -6,6 +6,7 @@ export const packageVersion = packageJson.version;
 export const packageName = packageJson.name;
 export const packageAuthor = packageJson.author;
 export const packageHomepage = packageJson.homepage;
+export const firefoxGeckoId = 'better-reviews-for-amazon@vrizo.github';
 
 export const manifestMatchPatterns = [
   'https://www.amazon.com/*',
@@ -86,7 +87,10 @@ export function buildFirefoxManifest() {
     ...manifestBase,
     browser_specific_settings: {
       gecko: {
-        id: 'better-reviews-for-amazon@vrizo.github'
+        id: firefoxGeckoId,
+        data_collection_permissions: {
+          required: ['none']
+        }
       }
     }
   };

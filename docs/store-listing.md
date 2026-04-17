@@ -1,6 +1,24 @@
 # Store Listing Preparation
 
-This note collects the store fields and the shared copy that is ready to paste for publication.
+This note collects the exact values and files for the first public Chrome Web Store and Firefox Add-ons submissions.
+
+## Release artifacts
+
+Build the store upload files with one command:
+
+- `npm run build:release`
+
+Expected outputs in [`dist/release/`](../dist/release/):
+
+- `better-reviews-for-amazon-chrome-0.4.0.zip`
+- `better-reviews-for-amazon-firefox-0.4.0.xpi`
+
+Both archives must contain these files at archive root:
+
+- `manifest.json`
+- `content.js`
+- `_locales/`
+- `icons/`
 
 ## Supported locales
 
@@ -10,7 +28,7 @@ The project currently ships these locales:
 - `de`
 - `ru`
 
-The browser-managed extension name and short summary already come from the localized files in [`src/i18n/locales/`](../src/i18n/locales/).
+The browser-managed extension name and summary come from the localized files in [`src/i18n/locales/`](../src/i18n/locales/).
 
 ## Author and project links
 
@@ -21,9 +39,12 @@ The author data below was checked with GitHub CLI on 2026-04-06 by using `gh api
 - GitHub profile: https://github.com/vrizo
 - Public location: Berlin, Germany
 - Repository: https://github.com/vrizo/better-reviews-for-amazon
-- Pull requests: https://github.com/vrizo/better-reviews-for-amazon/pulls
-- Issues: https://github.com/vrizo/better-reviews-for-amazon/issues
-- Translation files: https://github.com/vrizo/better-reviews-for-amazon/tree/main/src/i18n/locales
+- Homepage URL: https://github.com/vrizo/better-reviews-for-amazon
+- Support URL: https://github.com/vrizo/better-reviews-for-amazon/issues
+- Contribution URL: https://github.com/vrizo/better-reviews-for-amazon/pulls
+- Support email: `vitalii.rizo@gmail.com`
+- License: MIT
+- Privacy policy URL: https://github.com/vrizo/better-reviews-for-amazon/blob/main/docs/privacy-policy.md
 
 ## Shared listing copy
 
@@ -33,158 +54,179 @@ Use one shared long description across stores. The localized text lives in:
 - [`src/i18n/locales/de.json`](../src/i18n/locales/de.json) at `marketplace.description`
 - [`src/i18n/locales/ru.json`](../src/i18n/locales/ru.json) at `marketplace.description`
 
-Use the localized manifest description as the short summary:
+Use the localized manifest description as the short summary.
 
-- `en`: Makes product reviews look more trustworthy on Amazon pages.
-- `de`: Lässt Produktbewertungen auf Amazon-Seiten vertrauenswürdiger wirken.
-- `ru`: Делает отзывы о товарах на страницах Amazon более заслуживающими доверия.
+### Name
 
-Ready-to-paste long descriptions:
+- `en`: Better Reviews for Amazon
+- `de`: Better Reviews for Amazon
+- `ru`: Better Reviews for Amazon
 
-### English
+### Summary
 
-Better Reviews for Amazon adds a small review summary block to Amazon product pages. It helps you read review quality signals faster by showing verified purchase review totals, positive verified reviews, critical verified reviews, and Vine reviews in one place.
+- `en`: Makes Amazon product reviews easier to trust and compare.
+- `de`: Blendet unzuverlässige Bewertungen aus und erleichtert die Einschätzung von Produkten auf Amazon.
+- `ru`: Скрывает недоверенные отзывы и упрощает оценку товаров в Amazon.
 
-The tool only works on Amazon pages. It runs locally in the browser, does not collect user data, does not send data to a backend, and does not add referral links or tracking.
+### Long description
 
-This open source project was created by Vitalii Rizo. Contributions are welcome on GitHub, including pull requests for translations and other small improvements. This project is not affiliated with or endorsed by Amazon.
+#### English
 
-### German
+Better Reviews for Amazon adds a small review summary box to Amazon product pages. It helps you quickly understand review quality by showing totals for verified purchase reviews only.
 
-Better Reviews for Amazon fügt Amazon-Produktseiten einen kleinen Bewertungsblock hinzu. Damit lassen sich wichtige Qualitätssignale schneller lesen, weil Bewertungen mit verifiziertem Kauf, positive Bewertungen, kritische Bewertungen und Vine-Bewertungen an einer Stelle zusammengefasst werden.
+It excludes Vine reviews from rating calculations. Vine reviews are written by reviewers who receive products for free in exchange for feedback, which can make them less reliable.
 
-Das Tool funktioniert nur auf Amazon-Seiten. Es läuft lokal im Browser, sammelt keine Nutzerdaten, sendet nichts an ein Backend und fügt keine Referral-Links oder kein Tracking hinzu.
+The extension only works on Amazon pages. It runs locally in your browser, does not collect your data, does not send anything to a backend, and does not add referral links or tracking.
 
-Dieses Open-Source-Projekt wurde von Vitalii Rizo erstellt. Beiträge auf GitHub sind willkommen, zum Beispiel Pull Requests für Übersetzungen und andere kleine Verbesserungen. Dieses Projekt ist weder mit Amazon verbunden noch von Amazon unterstützt.
+This open source project was created by Vitalii Rizo. Contributions are welcome on GitHub, including pull requests for translations and other small improvements. This project is not affiliated with Amazon and is not endorsed by Amazon.
 
-### Russian
+#### German
 
-Better Reviews for Amazon добавляет небольшой блок со сводкой отзывов на страницы товаров Amazon. Он помогает быстрее оценить качество отзывов, показывая в одном месте количество отзывов с подтверждённой покупкой, положительные отзывы, критические отзывы и отзывы Vine.
+Better Reviews for Amazon fügt auf Amazon-Produktseiten einen kleinen Block mit einer kurzen Zusammenfassung der Bewertungen hinzu. Er hilft, die Qualität der Bewertungen schnell einzuschätzen, indem nur Bewertungen mit verifiziertem Kauf angezeigt werden.
 
-Инструмент работает только на страницах Amazon. Он выполняется локально в браузере, не собирает пользовательские данные, не отправляет данные на сервер и не добавляет реферальные ссылки или трекинг.
+Die Erweiterung schließt Vine-Bewertungen aus der Berechnung der Bewertung aus. Vine-Bewertungen stammen von Nutzern, die Produkte kostenlos im Austausch für Feedback erhalten, daher können sie weniger zuverlässig sein.
 
-Это open source проект, созданный Vitalii Rizo. Вклад через GitHub приветствуется, например pull request с переводами и другими небольшими улучшениями. Проект не связан с Amazon и не одобрен Amazon.
+Die Erweiterung funktioniert nur auf Amazon-Seiten. Sie läuft lokal in Ihrem Browser, sammelt keine Daten, sendet nichts an einen Server und fügt keine Affiliate-Links oder Tracking hinzu.
 
-The long description already includes:
+Dieses Open-Source-Projekt wurde von Vitalii Rizo erstellt. Beiträge auf GitHub sind willkommen, einschließlich Pull Requests mit Übersetzungen und anderen Verbesserungen. Das Projekt ist nicht mit Amazon verbunden und wurde nicht von Amazon genehmigt.
 
-- what the tool does
-- the privacy-safe scope
-- the author name
-- the GitHub contribution invitation
-- the Amazon non-affiliation note
+#### Russian
 
-## Store fields
+Better Reviews for Amazon добавляет небольшой блок с краткой сводкой отзывов на страницы товаров Amazon. Он помогает быстро оценить качество отзывов, показывая только отзывы с подтверждённой покупкой.
 
-### Chrome Web Store
+Расширение исключает отзывы Vine из расчёта рейтинга. Отзывы Vine пишут пользователи, которые получают товары бесплатно в обмен на обратную связь, поэтому они могут быть менее надёжными.
 
-Prepare these fields before first publication:
+Расширение работает только на страницах Amazon. Оно выполняется локально в вашем браузере, не собирает данные, ничего не отправляет на сервер и не добавляет реферальные ссылки или трекинг.
 
-- Publisher name in the developer account
-- Verified developer account email
-- Store listing tab
-- Privacy tab
-- Distribution tab
+Этот проект с открытым исходным кодом создан Vitalii Rizo. Приветствуются изменения на GitHub, включая pull request с переводами и другими улучшениями. Проект не связан с Amazon и не был одобрен Amazon.
 
-Prepare these listing assets and texts:
+## Chrome Web Store submission values
 
-- Item title
-- Item summary, 132 characters or less
-- Item description
-- Store icon
-- At least 1 screenshot, up to 5 total
-- Optional website URL
-- Optional support URL
-- Optional promo images
+### Listing
 
-Important notes:
-
-- The summary should also work as the browser-visible extension description.
-- Locale-specific strings are supported for the summary.
-- The listing can be rejected if description, icon, or screenshots are missing.
-- Screenshot requirements:
-- Use square corners and no padding.
-- Use `1280x800` or `640x400`.
-- `1280x800` is preferred.
-- Screenshots should show the real user experience and current functionality.
-
-### Firefox Add-ons
-
-Prepare these listing fields in AMO:
-
-- Name
-- Add-on URL slug
-- Summary
-- Description
-- Up to 2 Firefox categories
-- Up to 2 Firefox for Android categories
-- Support email
-- Support website
-- License
-- Privacy policy only if data is transmitted
-- Notes for reviewers
-
-Important notes:
-
-- The summary limit is 250 characters.
-- You can localize almost all listing text, including the add-on name.
-- AMO supports multiple authors through owners and developers.
-- Screenshot guidance:
-- There is no practical limit to the number of screenshots, but each one should show a key feature.
-- You can upload only one screenshot set for the listing, but localize screenshot descriptions.
-- Mozilla recommends `1280x800` as the maximum display size.
-- For other sizes, Mozilla recommends keeping the `1.6:1` ratio.
-
-### Microsoft Edge Add-ons
-
-Prepare these language-specific fields in Partner Center:
-
-- Description, required for each language
-- Extension logo, required for each language
-- Extension name, required for at least one language
-- Short description, required for at least one language
-
-Optional fields:
-
-- Small promotional tile
-- Large promotional tile
-- Up to 6 screenshots
-- YouTube video URL
-- Search terms
-
-Important notes:
-
-- Description length must be 250 to 10,000 characters.
-- The current manifest localization setup is compatible with Edge locale detection because it uses `__MSG_...__` placeholders and `_locales` files.
-- Screenshot requirements:
-- Up to 6 screenshots.
-- Use `640x480` or `1280x800`.
-- One screenshot set can be duplicated to all languages from Partner Center.
-
-## Shared screenshot plan
-
-Use one English screenshot set for all supported listing languages.
-
-- Recommended common size for all three stores: `1280x800`
-- Why this size:
-- Chrome officially prefers `1280x800`
-- Firefox officially recommends `1280x800`
-- Edge officially accepts `1280x800`
-- Keep the screenshots in English and duplicate them across locales where the store allows it.
-- Anonymize all account and listing details before capture:
-- replace product title and seller text with fake values
-- hide cart state and delivery address
-- strongly blur the product image
-- keep only the extension-related review area readable
-
-## Suggested store values
-
-These values are ready now:
-
-- Name: Better Reviews for Amazon
-- Author display: Vitalii Rizo
-- Homepage URL: https://github.com/vrizo/better-reviews-for-amazon
+- Item title: Better Reviews for Amazon
+- Default language: English
+- Localized languages to add: German, Russian
+- Website: https://github.com/vrizo/better-reviews-for-amazon
 - Support URL: https://github.com/vrizo/better-reviews-for-amazon/issues
-- Contribution URL: https://github.com/vrizo/better-reviews-for-amazon/pulls
+
+Use these values:
+
+- `en` summary: Makes Amazon product reviews easier to trust and compare.
+- `de` summary: Blendet unzuverlässige Bewertungen aus und erleichtert die Einschätzung von Produkten auf Amazon.
+- `ru` summary: Скрывает недоверенные отзывы и упрощает оценку товаров в Amazon.
+
+Use the matching localized long descriptions from the section above.
+
+### Privacy answers
+
+These answers match the current code in [`src/core/main.ts`](../src/core/main.ts) and [`src/core/amazon.ts`](../src/core/amazon.ts):
+
+- Single purpose: Yes. The extension adds one review summary block on Amazon product pages.
+- Data sale: No.
+- Data use outside core functionality: No.
+- Authentication info collected or transmitted: No.
+- Personal communications collected or transmitted: No.
+- Location collected or transmitted: No.
+- Web history collected or transmitted: No.
+- User activity collected or transmitted: No.
+- Website content collected or transmitted to a remote server: No.
+- Local processing only: Yes.
+- Tracking: No.
+- Ads or affiliate links: No.
+- Remote code: No.
+
+Behavior notes:
+
+- The extension runs only on Amazon URLs declared in the manifest.
+- It fetches Amazon review pages from the current Amazon origin with `credentials: "include"`.
+- It stores cached review totals in browser local storage for 24 hours.
+- It does not send data to any backend.
+- Suggested privacy policy URL:
+- https://github.com/vrizo/better-reviews-for-amazon/blob/main/docs/privacy-policy.md
+
+### Distribution
+
+- Visibility: Public
+- Regions: All available
+
+## Firefox Add-ons submission values
+
+### Basic listing
+
+- Add-on name: Better Reviews for Amazon
+- Add-on URL slug: `better-reviews-for-amazon`
+- Support email: `vitalii.rizo@gmail.com`
+- Support website: https://github.com/vrizo/better-reviews-for-amazon/issues
+- Homepage: https://github.com/vrizo/better-reviews-for-amazon
+- License: MIT
+- Desktop categories: `Shopping`, `Productivity`
+- Android categories: `Shopping`, `Productivity`
+
+### Localization
+
+Add localized summary and description for:
+
+- English
+- German
+- Russian
+
+Use the matching text from the shared listing copy section.
+
+### Reviewer notes
+
+Use this reviewer note:
+
+```text
+This add-on is a content-script-only tool for Amazon product pages.
+
+It injects a small review summary block below the product rating and reads review counts by fetching Amazon review filter pages from the same Amazon origin as the current page. The requests use the signed-in Amazon session already present in the browser. No data is sent to any external server.
+
+The add-on stores cached review totals in browser local storage for 24 hours to reduce repeated Amazon requests. It does not include analytics, ads, affiliate links, remote code, or any background data collection.
+
+Source code and build scripts:
+https://github.com/vrizo/better-reviews-for-amazon
+```
+
+### Firefox manifest values
+
+These values are expected in the generated Firefox manifest:
+
+- Gecko ID: `better-reviews-for-amazon@vrizo.github`
+- Data collection permissions: `required = ["none"]`
+
+## Screenshot assets
+
+Use the current `1280x800` screenshots from [`docs/images/`](../docs/images/):
+
+- [`review-block-before-highlight.png`](../docs/images/review-block-before-highlight.png)
+- [`review-block-after-highlight.png`](../docs/images/review-block-after-highlight.png)
+
+Do not use promo images for the first submission unless a store step blocks on them.
+
+## Upload asset paths
+
+Chrome:
+
+- Package: [`better-reviews-for-amazon-chrome-0.4.0.zip`](../dist/release/better-reviews-for-amazon-chrome-0.4.0.zip)
+- Icon: [`icon-128.png`](../dist/chrome/icons/icon-128.png)
+- Screenshots:
+- [`review-block-before-highlight.png`](../docs/images/review-block-before-highlight.png)
+- [`review-block-after-highlight.png`](../docs/images/review-block-after-highlight.png)
+
+Firefox:
+
+- Package: [`better-reviews-for-amazon-firefox-0.4.0.xpi`](../dist/release/better-reviews-for-amazon-firefox-0.4.0.xpi)
+- Icon: [`icon-128.png`](../dist/firefox/icons/icon-128.png)
+- Screenshots:
+- [`review-block-before-highlight.png`](../docs/images/review-block-before-highlight.png)
+- [`review-block-after-highlight.png`](../docs/images/review-block-after-highlight.png)
+
+## Notes
+
+- Existing screenshots already match the preferred `1280x800` size.
+- No separate privacy policy page is planned because the extension does not transmit user data.
+- If a store validator or reviewer requests a different field value, update this file with the accepted value after submission.
 
 ## Sources
 
@@ -198,5 +240,5 @@ Official sources used for this note:
 - Chrome developer account setup: https://developer.chrome.com/docs/webstore/set-up-account
 - Firefox submission fields: https://extensionworkshop.com/documentation/publish/submitting-an-add-on/
 - Firefox listing guidance: https://extensionworkshop.com/documentation/develop/create-an-appealing-listing/
+- Firefox built-in consent for data collection and transmission: https://www.extensionworkshop.com/documentation/develop/firefox-builtin-data-consent/
 - Firefox add-on ownership: https://extensionworkshop.com/documentation/publish/add-on-ownership/
-- Microsoft Edge submission and store listings: https://learn.microsoft.com/en-us/microsoft-edge/extensions/publish/publish-extension

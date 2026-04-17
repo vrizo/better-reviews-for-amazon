@@ -1,5 +1,5 @@
 import { execFile } from 'node:child_process';
-import { mkdir, rename, rm } from 'node:fs/promises';
+import { mkdir, rm } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { promisify } from 'node:util';
 import { packageName, packageVersion } from './manifest-base.mjs';
@@ -7,17 +7,23 @@ import { packageName, packageVersion } from './manifest-base.mjs';
 const execFileAsync = promisify(execFile);
 const distDir = new URL('../dist/', import.meta.url);
 const releaseDir = new URL('../dist/release/', import.meta.url);
-const distPath = fileURLToPath(distDir);
+const releasePath = fileURLToPath(releaseDir);
 
 await rm(releaseDir, { recursive: true, force: true });
 await mkdir(releaseDir, { recursive: true });
 
-for (const target of ['chrome', 'firefox']) {
-  const archiveName = `${packageName}-${target}-${packageVersion}.zip`;
+for (const { target, extension } of [
+  { target: 'chrome', extension: 'zip' },
+  { target: 'firefox', extension: 'xpi' }
+]) {
+  const archiveName = `${packageName}-${target}-${packageVersion}.${extension}`;
+  const targetPath = fileURLToPath(new URL(`../dist/${target}/`, import.meta.url));
 
   try {
-    await execFileAsync('zip', ['-qr', '-X', archiveName, target], {
-      cwd: distPath
+    // Package the extension directory contents at archive root so the stores
+    // can read manifest.json directly from the uploaded archive.
+    await execFileAsync('zip', ['-qr', '-X', `${releasePath}/${archiveName}`, '.'], {
+      cwd: targetPath
     });
   } catch (error) {
     if (error && error.code === 'ENOENT') {
@@ -26,9 +32,4 @@ for (const target of ['chrome', 'firefox']) {
 
     throw error;
   }
-
-  await rename(
-    new URL(archiveName, distDir),
-    new URL(archiveName, releaseDir)
-  );
 }

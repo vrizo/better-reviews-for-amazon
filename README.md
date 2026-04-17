@@ -46,7 +46,9 @@ Extension metadata follows the browser language when a translation is available.
 - Extension icons are rendered from [`src/icon.svg`](./src/icon.svg) during build and added to both browser packages.
 - Run `npm install`.
 - Run `npm run build`.
-- Run `npm run build:release` to create Chrome and Firefox zip files in `dist/release/`.
+- Run `npm run build:release` to create the store upload archives in `dist/release/`:
+- Chrome: `better-reviews-for-amazon-chrome-<version>.zip`
+- Firefox: `better-reviews-for-amazon-firefox-<version>.xpi`
 
 ## Contribute
 
@@ -63,6 +65,7 @@ Contributions are welcome on GitHub.
 - Review numbers are cached for 24 hours.
 - The script reads Amazon review filter pages and shows the totals on the product page.
 - This project is not affiliated with or endorsed by Amazon.
+- This project is released under the MIT License.
 
 ## Author
 

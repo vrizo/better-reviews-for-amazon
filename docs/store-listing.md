@@ -45,6 +45,8 @@ The author data below was checked with GitHub CLI on 2026-04-06 by using `gh api
 - Support email: `vitalii.rizo@gmail.com`
 - License: MIT
 - Privacy policy URL: https://github.com/vrizo/better-reviews-for-amazon/blob/main/docs/privacy-policy.md
+- Repository visibility: Public
+- Promo video URL: https://youtu.be/i6ADZwzd3zc
 
 ## Shared listing copy
 
@@ -117,6 +119,10 @@ Use these values:
 - `ru` summary: Скрывает недоверенные отзывы и упрощает оценку товаров в Amazon.
 
 Use the matching localized long descriptions from the section above.
+
+### Promo video
+
+- Global promo video URL: https://youtu.be/i6ADZwzd3zc
 
 ### Privacy answers
 
@@ -201,6 +207,10 @@ Use the current `1280x800` screenshots from [`docs/images/`](../docs/images/):
 
 - [`review-block-before-highlight.png`](../docs/images/review-block-before-highlight.png)
 - [`review-block-after-highlight.png`](../docs/images/review-block-after-highlight.png)
+- [`review-block-before-highlight-de.png`](../docs/images/review-block-before-highlight-de.png)
+- [`review-block-after-highlight-de.png`](../docs/images/review-block-after-highlight-de.png)
+- [`review-block-before-highlight-ru.png`](../docs/images/review-block-before-highlight-ru.png)
+- [`review-block-after-highlight-ru.png`](../docs/images/review-block-after-highlight-ru.png)
 
 Do not use promo images for the first submission unless a store step blocks on them.
 
@@ -210,21 +220,35 @@ Chrome:
 
 - Package: [`better-reviews-for-amazon-chrome-0.4.0.zip`](../dist/release/better-reviews-for-amazon-chrome-0.4.0.zip)
 - Icon: [`icon-128.png`](../dist/chrome/icons/icon-128.png)
-- Screenshots:
+- Default screenshots:
 - [`review-block-before-highlight.png`](../docs/images/review-block-before-highlight.png)
 - [`review-block-after-highlight.png`](../docs/images/review-block-after-highlight.png)
+- German screenshots:
+- [`review-block-before-highlight-de.png`](../docs/images/review-block-before-highlight-de.png)
+- [`review-block-after-highlight-de.png`](../docs/images/review-block-after-highlight-de.png)
+- Russian screenshots:
+- [`review-block-before-highlight-ru.png`](../docs/images/review-block-before-highlight-ru.png)
+- [`review-block-after-highlight-ru.png`](../docs/images/review-block-after-highlight-ru.png)
+- Promo video:
+- https://youtu.be/i6ADZwzd3zc
 
 Firefox:
 
 - Package: [`better-reviews-for-amazon-firefox-0.4.0.xpi`](../dist/release/better-reviews-for-amazon-firefox-0.4.0.xpi)
 - Icon: [`icon-128.png`](../dist/firefox/icons/icon-128.png)
-- Screenshots:
+- Default screenshots:
 - [`review-block-before-highlight.png`](../docs/images/review-block-before-highlight.png)
 - [`review-block-after-highlight.png`](../docs/images/review-block-after-highlight.png)
+- German screenshots:
+- [`review-block-before-highlight-de.png`](../docs/images/review-block-before-highlight-de.png)
+- [`review-block-after-highlight-de.png`](../docs/images/review-block-after-highlight-de.png)
+- Russian screenshots:
+- [`review-block-before-highlight-ru.png`](../docs/images/review-block-before-highlight-ru.png)
+- [`review-block-after-highlight-ru.png`](../docs/images/review-block-after-highlight-ru.png)
 
 ## Notes
 
-- Existing screenshots already match the preferred `1280x800` size.
+- Default and localized screenshots match the preferred `1280x800` size.
 - No separate privacy policy page is planned because the extension does not transmit user data.
 - If a store validator or reviewer requests a different field value, update this file with the accepted value after submission.
 

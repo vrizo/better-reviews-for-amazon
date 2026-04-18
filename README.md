@@ -4,11 +4,11 @@
 
 Open source tools for better review signals on Amazon pages.
 
-Right now this repo contains one userscript and the shared source for browser extensions.
-Later it will also contain:
+Right now this repo contains one live userscript and the shared source for browser extensions.
+The browser versions are currently in review:
 
-- a Chrome extension
-- a Firefox extension
+- Chrome extension
+- Firefox add-on
 
 All versions follow the same rules:
 
@@ -38,6 +38,16 @@ Extension metadata follows the browser language when a translation is available.
 2. Open the Greasy Fork install page: [Better Reviews for Amazon on Greasy Fork](https://greasyfork.org/en/scripts/574410-better-reviews-for-amazon).
 3. Click `Install this script`.
 4. Alternative: open [`better-reviews-for-amazon.user.js`](./better-reviews-for-amazon.user.js) and install it in your userscript manager.
+
+## Screenshots
+
+Before:
+
+![Before screenshot](./docs/images/review-block-before.png)
+
+After:
+
+![After screenshot](./docs/images/review-block-after.png)
 
 ## Development
 
@@ -69,20 +79,6 @@ Contributions are welcome on GitHub.
 - The script reads Amazon review filter pages and shows the totals on the product page.
 - This project is not affiliated with or endorsed by Amazon.
 - This project is released under the MIT License.
-
-## Author
-
-Built by [Vitalii Rizo](https://github.com/vrizo).
-
-## Screenshots
-
-Before:
-
-![Before screenshot](./docs/images/review-block-before.png)
-
-After:
-
-![After screenshot](./docs/images/review-block-after.png)
 
 ## Docs
 

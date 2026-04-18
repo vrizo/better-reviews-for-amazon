@@ -1,5 +1,7 @@
 # Better Reviews for Amazon
 
+[![Better Reviews for Amazon](https://img.shields.io/badge/Better%20Reviews%20for%20Amazon-Install%20from%20Greasy%20Fork-ff9800?style=for-the-badge)](https://greasyfork.org/en/scripts/574410-better-reviews-for-amazon)
+
 Open source tools for better review signals on Amazon pages.
 
 Right now this repo contains one userscript and the shared source for browser extensions.
@@ -33,8 +35,9 @@ Extension metadata follows the browser language when a translation is available.
 ## Install
 
 1. Install Tampermonkey or Violentmonkey.
-2. Open [`better-reviews-for-amazon.user.js`](./better-reviews-for-amazon.user.js).
-3. Install the script in your userscript manager.
+2. Open the Greasy Fork install page: [Better Reviews for Amazon on Greasy Fork](https://greasyfork.org/en/scripts/574410-better-reviews-for-amazon).
+3. Click `Install this script`.
+4. Alternative: open [`better-reviews-for-amazon.user.js`](./better-reviews-for-amazon.user.js) and install it in your userscript manager.
 
 ## Development
 

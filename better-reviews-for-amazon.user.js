@@ -4,6 +4,7 @@
 // @author       Vitalii Rizo (https://github.com/vrizo)
 // @version      0.4.0
 // @description  Makes Amazon product reviews easier to trust and compare.
+// @license      MIT
 // @name:de    Better Reviews for Amazon
 // @description:de Blendet unzuverlässige Bewertungen aus und erleichtert die Einschätzung von Produkten auf Amazon.
 // @name:ru    Better Reviews for Amazon

@@ -19,6 +19,7 @@ const header = `// ==UserScript==
 // @author       ${packageAuthor}
 // @version      ${packageVersion}
 // @description  ${defaultMessages.meta.description}
+// @license      MIT
 ${localizedHeader}
 // @include      /^https:\\/\\/(www\\.)?amazon\\.[^/]+\\/.*$/
 // @grant        none

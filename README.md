@@ -5,10 +5,10 @@
 Open source tools for better review signals on Amazon pages.
 
 Right now this repo contains one live userscript and the shared source for browser extensions.
-The browser versions are currently in review:
+Browser status:
 
-- Chrome extension
-- Firefox add-on
+- Chrome extension: [Chrome Web Store](https://chrome.google.com/webstore/detail/lcephgfijpdgdddilcjldnadamfoogme)
+- Firefox add-on: waiting for review
 
 All versions follow the same rules:
 
@@ -34,10 +34,18 @@ Extension metadata follows the browser language when a translation is available.
 
 ## Install
 
+### Userscript
+
 1. Install Tampermonkey or Violentmonkey.
 2. Open the Greasy Fork install page: [Better Reviews for Amazon on Greasy Fork](https://greasyfork.org/en/scripts/574410-better-reviews-for-amazon).
 3. Click `Install this script`.
 4. Alternative: open [`better-reviews-for-amazon.user.js`](./better-reviews-for-amazon.user.js) and install it in your userscript manager.
+
+### Chrome extension
+
+Install from the Chrome Web Store:
+
+- [Better Reviews for Amazon](https://chrome.google.com/webstore/detail/lcephgfijpdgdddilcjldnadamfoogme)
 
 ## Screenshots
 

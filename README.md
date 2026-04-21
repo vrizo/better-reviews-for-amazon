@@ -2,37 +2,28 @@
 
 [![Better Reviews for Amazon](https://img.shields.io/badge/Better%20Reviews%20for%20Amazon-Install%20from%20Greasy%20Fork-ff9800?style=for-the-badge)](https://greasyfork.org/en/scripts/574410-better-reviews-for-amazon)
 
-Open source tools for better review signals on Amazon pages.
+Better Reviews for Amazon adds a small review summary box to Amazon product pages. It helps you quickly understand review quality by showing totals for verified purchase reviews only.
 
-Right now this repo contains one live userscript and the shared source for browser extensions.
-Browser status:
+It excludes Vine reviews from rating calculations. Vine reviews are written by reviewers who receive products for free in exchange for feedback, which can make them less reliable.
 
 - Chrome extension: [Chrome Web Store](https://chrome.google.com/webstore/detail/lcephgfijpdgdddilcjldnadamfoogme)
-- Firefox add-on: waiting for review
+- Firefox add-on: [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/better-reviews-for-amazon/)
 
-All versions follow the same rules:
-
-- only work on Amazon pages
-- do not collect user data
-- do not send data to a backend
-- do not add referral links
-- do not change checkout or account pages
-
-## Current tool
-
-The current userscript adds a small review block under the product rating.
-
-It shows:
-
-- verified purchase rating and count
-- positive verified reviews
-- critical verified reviews
-- Vine reviews
-
-The injected block follows the Amazon page language.
-Extension metadata follows the browser language when a translation is available.
+The extension only works on Amazon pages. It runs locally in your browser, does not collect your data, does not send anything to a backend, and does not add referral links or tracking.
 
 ## Install
+
+### Chrome extension
+
+Install from the Chrome Web Store:
+
+- [Better Reviews for Amazon](https://chrome.google.com/webstore/detail/lcephgfijpdgdddilcjldnadamfoogme)
+
+### Firefox add-on
+
+Install from Firefox Add-ons:
+
+- [Better Reviews for Amazon](https://addons.mozilla.org/en-US/firefox/addon/better-reviews-for-amazon/)
 
 ### Userscript
 
@@ -40,12 +31,6 @@ Extension metadata follows the browser language when a translation is available.
 2. Open the Greasy Fork install page: [Better Reviews for Amazon on Greasy Fork](https://greasyfork.org/en/scripts/574410-better-reviews-for-amazon).
 3. Click `Install this script`.
 4. Alternative: open [`better-reviews-for-amazon.user.js`](./better-reviews-for-amazon.user.js) and install it in your userscript manager.
-
-### Chrome extension
-
-Install from the Chrome Web Store:
-
-- [Better Reviews for Amazon](https://chrome.google.com/webstore/detail/lcephgfijpdgdddilcjldnadamfoogme)
 
 ## Screenshots
 
